@@ -1,0 +1,271 @@
+devtech.machine.electric_furnace.ulv.name=Primitive Electric Furnace
+devtech.machine.electric_furnace.iv.name=Ultimate Electric Furnace
+devtech.machine.electric_furnace.luv.name=Ultimate Electric Furnace II
+devtech.machine.electric_furnace.zpm.name=Ultimate Electric Furnace III
+devtech.machine.electric_furnace.uv.name=Ultimate Electric Furnace IV
+devtech.machine.electric_furnace.max.name=Infinite Electric Furnace
+
+devtech.machine.macerator.ulv.name=Primitive Macerator
+devtech.machine.macerator.iv.name=Ultimate Pulverizer
+devtech.machine.macerator.luv.name=Ultimate Pulverizer II
+devtech.machine.macerator.zpm.name=Ultimate Pulverizer III
+devtech.machine.macerator.uv.name=Ultimate Pulverizer IV
+devtech.machine.macerator.max.name=Infinite Pulverizer
+
+devtech.machine.alloy_smelter.ulv.name=Primitive Alloy Smelter
+devtech.machine.alloy_smelter.iv.name=Ultimate Alloy Smelter
+devtech.machine.alloy_smelter.luv.name=Ultimate Alloy Smelter II
+devtech.machine.alloy_smelter.zpm.name=Ultimate Alloy Smelter III
+devtech.machine.alloy_smelter.uv.name=Ultimate Alloy Smelter IV
+devtech.machine.alloy_smelter.max.name=Infinite Alloy Smelter
+
+devtech.machine.amplifab.ulv.name=Primitive Amplifabricator
+devtech.machine.amplifab.iv.name=Ultimate Amplifabricator
+devtech.machine.amplifab.luv.name=Ultimate Amplifabricator II
+devtech.machine.amplifab.zpm.name=Ultimate Amplifabricator III
+devtech.machine.amplifab.uv.name=Ultimate Amplifabricator IV
+devtech.machine.amplifab.max.name=Infinite Amplifabricator
+
+devtech.machine.arc_furnace.ulv.name=Primitive Arc Furnace
+devtech.machine.arc_furnace.iv.name=Ultimate Arc Furnace
+devtech.machine.arc_furnace.luv.name=Ultimate Arc Furnace II
+devtech.machine.arc_furnace.zpm.name=Ultimate Arc Furnace III
+devtech.machine.arc_furnace.uv.name=Ultimate Arc Furnace IV
+devtech.machine.arc_furnace.max.name=Infinite Arc Furnace
+
+devtech.machine.assembler.ulv.name=Primitive Assembling Machine
+devtech.machine.assembler.luv.name=Ultimate Assembling Machine
+devtech.machine.assembler.zpm.name=Ultimate Assembling Machine II
+devtech.machine.assembler.uv.name=Ultimate Assembling Machine III
+devtech.machine.assembler.max.name=Infinite Assembling Machine
+
+devtech.machine.autoclave.ulv.name=Primitive Autoclave
+devtech.machine.autoclave.luv.name=Ultimate Autoclave
+devtech.machine.autoclave.zpm.name=Ultimate Autoclave II
+devtech.machine.autoclave.uv.name=Ultimate Autoclave III
+devtech.machine.autoclave.max.name=Infinite Autoclave
+
+devtech.machine.bender.ulv.name=Primitive Bending Machine
+devtech.machine.bender.iv.name=Ultimate Bending Machine
+devtech.machine.bender.luv.name=Ultimate Bending Machine II
+devtech.machine.bender.zpm.name=Ultimate Bending Machine III
+devtech.machine.bender.uv.name=Ultimate Bending Machine IV
+devtech.machine.bender.max.name=Infinite Bending Machine
+
+devtech.machine.brewery.ulv.name=Primitive Brewery
+devtech.machine.brewery.iv.name=Ultimate Brewery
+devtech.machine.brewery.luv.name=Ultimate Brewery II
+devtech.machine.brewery.zpm.name=Ultimate Brewery III
+devtech.machine.brewery.uv.name=Ultimate Brewery IV
+devtech.machine.brewery.max.name=Infinite Brewery
+
+devtech.machine.canner.ulv.name=Primitive Canning Machine
+devtech.machine.canner.iv.name=Ultimate Canning Machine
+devtech.machine.canner.luv.name=Ultimate Canning Machine II
+devtech.machine.canner.zpm.name=Ultimate Canning Machine III
+devtech.machine.canner.uv.name=Ultimate Canning Machine IV
+devtech.machine.canner.max.name=Infinite Canning Machine
+
+
+devtech.machine.centrifuge.ulv.name=Primitive Centrifuge
+devtech.machine.centrifuge.iv.name=Ultimate Centrifuge
+devtech.machine.centrifuge.luv.name=Ultimate Centrifuge II
+devtech.machine.centrifuge.zpm.name=Ultimate Centrifuge III
+devtech.machine.centrifuge.uv.name=Ultimate Centrifuge IV
+devtech.machine.centrifuge.max.name=Infinite Centrifuge
+
+devtech.machine.chemical_bath.ulv.name=Primitive Chemical Bath
+devtech.machine.chemical_bath.iv.name=Ultimate Chemical Bath
+devtech.machine.chemical_bath.luv.name=Ultimate Chemical Bath II
+devtech.machine.chemical_bath.zpm.name=Ultimate Chemical Bath III
+devtech.machine.chemical_bath.uv.name=Ultimate Chemical Bath IV
+devtech.machine.chemical_bath.max.name=Infinite Chemical Bath
+
+devtech.machine.chemical_reactor.ulv.name=Primitive Chemical Reactor
+devtech.machine.chemical_reactor.iv.name=Ultimate Chemical Reactor
+devtech.machine.chemical_reactor.luv.name=Ultimate Chemical Reactor II
+devtech.machine.chemical_reactor.zpm.name=Ultimate Chemical Reactor III
+devtech.machine.chemical_reactor.uv.name=Ultimate Chemical Reactor IV
+devtech.machine.chemical_reactor.max.name=Infinite Chemical Reactor
+
+devtech.machine.compressor.ulv.name=Primitive Compressor
+devtech.machine.compressor.iv.name=Ultimate Compressor
+devtech.machine.compressor.luv.name=Ultimate Compressor II
+devtech.machine.compressor.zpm.name=Ultimate Compressor III
+devtech.machine.compressor.uv.name=Ultimate Compressor IV
+devtech.machine.compressor.max.name=Infinite Compressor
+
+devtech.machine.cutter.ulv.name=Primitive Cutting Machine
+devtech.machine.cutter.iv.name=Ultimate Cutting Machine
+devtech.machine.cutter.luv.name=Ultimate Cutting Machine II
+devtech.machine.cutter.zpm.name=Ultimate Cutting Machine III
+devtech.machine.cutter.uv.name=Ultimate Cutting Machine IV
+devtech.machine.cutter.max.name=Infinite Cutting Machine
+
+devtech.machine.distillery.ulv.name=Primitive Distillery
+devtech.machine.distillery.iv.name=Ultimate Distillery
+devtech.machine.distillery.luv.name=Ultimate Distillery II
+devtech.machine.distillery.zpm.name=Ultimate Distillery III
+devtech.machine.distillery.uv.name=Ultimate Distillery IV
+devtech.machine.distillery.max.name=Infinite Distillery
+
+devtech.machine.electrolyzer.ulv.name=Primitive Dissolver
+devtech.machine.electrolyzer.iv.name=Ulimate Dissolver
+devtech.machine.electrolyzer.luv.name=Ulimate Dissolver II
+devtech.machine.electrolyzer.zpm.name=Ulimate Dissolver III
+devtech.machine.electrolyzer.uv.name=Ulimate Dissolver IV
+devtech.machine.electrolyzer.max.name=Infinite Dissolver
+
+devtech.machine.electromagnetic_separator.ulv.name=Primitive Electromagnetic Separator
+devtech.machine.electromagnetic_separator.iv.name=Ultimate Electromagnetic Separator
+devtech.machine.electromagnetic_separator.luv.name=Ultimate Electromagnetic Separator II
+devtech.machine.electromagnetic_separator.zpm.name=Ultimate Electromagnetic Separator III
+devtech.machine.electromagnetic_separator.uv.name=Ultimate Electromagnetic Separator IV
+devtech.machine.electromagnetic_separator.max.name=Infinite Electromagnetic Separator
+
+devtech.machine.extractor.ulv.name=Primitive Extractor
+devtech.machine.extractor.iv.name=Ultimate Extractor
+devtech.machine.extractor.luv.name=Ultimate Extractor II
+devtech.machine.extractor.zpm.name=Ultimate Extractor III
+devtech.machine.extractor.uv.name=Ultimate Extractor IV
+devtech.machine.extractor.max.name=Infinite Extractor
+
+devtech.machine.extruder.ulv.name=Primitive Extruder
+devtech.machine.extruder.lv.name=Basic Extruder
+devtech.machine.extruder.iv.name=Ultimate Extruder
+devtech.machine.extruder.luv.name=Ultimate Extruder II
+devtech.machine.extruder.zpm.name=Ultimate Extruder III
+devtech.machine.extruder.uv.name=Ultimate Extruder IV
+devtech.machine.extruder.max.name=Infinite Extruder
+
+devtech.machine.fermenter.ulv.name=Primitive Fermenter
+devtech.machine.fermenter.iv.name=Ultimate Fermenter
+devtech.machine.fermenter.luv.name=Ultimate Fermenter II
+devtech.machine.fermenter.zpm.name=Ultimate Fermenter III
+devtech.machine.fermenter.uv.name=Ultimate Fermenter IV
+devtech.machine.fermenter.max.name=Infinite Fermenter
+
+devtech.machine.fluid_canner.ulv.name=Primitive Fluid Canner
+devtech.machine.fluid_canner.iv.name=Ultimate Fluid Canner
+devtech.machine.fluid_canner.luv.name=Ultimate Fluid Canner II
+devtech.machine.fluid_canner.zpm.name=Ultimate Fluid Canner III
+devtech.machine.fluid_canner.uv.name=Ultimate Fluid Canner IV
+devtech.machine.fluid_canner.max.name=Infinite Fluid Canner
+
+devtech.machine.fluid_extractor.ulv.name=Primitive Fluid Extractor
+devtech.machine.fluid_extractor.iv.name=Ultimate Fluid Extractor
+devtech.machine.fluid_extractor.luv.name=Ultimate Fluid Extractor II
+devtech.machine.fluid_extractor.zpm.name=Ultimate Fluid Extractor III
+devtech.machine.fluid_extractor.uv.name=Ultimate Fluid Extractor IV
+devtech.machine.fluid_extractor.max.name=Infinite Fluid Extractor
+
+devtech.machine.fluid_heater.ulv.name=Primitive Fluid Heater
+devtech.machine.fluid_heater.iv.name=Ultimate Fluid Heater
+devtech.machine.fluid_heater.luv.name=Ultimate Fluid Heater II
+devtech.machine.fluid_heater.zpm.name=Ultimate Fluid Heater III
+devtech.machine.fluid_heater.uv.name=Ultimate Fluid Heater IV
+devtech.machine.fluid_heater.max.name=Infinite Fluid Heater
+
+devtech.machine.fluid_solidifier.ulv.name=Primitive Fluid Solidifier
+devtech.machine.fluid_solidifier.iv.name=Ultimate Fluid Solidifier
+devtech.machine.fluid_solidifier.luv.name=Ultimate Fluid Solidifier II
+devtech.machine.fluid_solidifier.zpm.name=Ultimate Fluid Solidifier III
+devtech.machine.fluid_solidifier.uv.name=Ultimate Fluid Solidifier IV
+devtech.machine.fluid_solidifier.max.name=Infinite Fluid Solidifier
+
+devtech.machine.forge_hammer.ulv.name=Primitive Forge Hammer
+devtech.machine.forge_hammer.iv.name=Ultimate Forge Hammer
+devtech.machine.forge_hammer.luv.name=Ultimate Forge Hammer II
+devtech.machine.forge_hammer.zpm.name=Ultimate Forge Hammer III
+devtech.machine.forge_hammer.uv.name=Ultimate Forge Hammer IV
+devtech.machine.forge_hammer.max.name=Infinite Forge Hammer
+
+devtech.machine.forming_press.ulv.name=Primitive Forming Press
+devtech.machine.forming_press.iv.name=Ultimate Forming Press
+devtech.machine.forming_press.luv.name=Ultimate Forming Press II
+devtech.machine.forming_press.zpm.name=Ultimate Forming Press III
+devtech.machine.forming_press.uv.name=Ultimate Forming Press IV
+devtech.machine.forming_press.max.name=Infinite Forming Press
+
+devtech.machine.lathe.ulv.name=Primitive Lathe
+devtech.machine.lathe.iv.name=Ultimate Lathe
+devtech.machine.lathe.luv.name=Ultimate Lathe II
+devtech.machine.lathe.zpm.name=Ultimate Lathe III
+devtech.machine.lathe.uv.name=Ultimate Lathe IV
+devtech.machine.lathe.max.name=Infinite Lathe
+
+devtech.machine.microwave.ulv.name=Primitive Microwave
+devtech.machine.microwave.iv.name=Ultimate Microwave
+devtech.machine.microwave.luv.name=Ultimate Microwave II
+devtech.machine.microwave.zpm.name=Ultimate Microwave III
+devtech.machine.microwave.uv.name=Ultimate Microwave IV
+devtech.machine.microwave.max.name=Infinite Microwave
+
+devtech.machine.mixer.ulv.name=Primitive Mixer
+devtech.machine.mixer.iv.name=Ultimate Mixer
+devtech.machine.mixer.luv.name=Ultimate Mixer II
+devtech.machine.mixer.zpm.name=Ultimate Mixer III
+devtech.machine.mixer.uv.name=Ultimate Mixer IV
+devtech.machine.mixer.max.name=Infinite Mixer
+
+devtech.machine.ore_washer.ulv.name=Primitive Ore Washing Plant
+devtech.machine.ore_washer.iv.name=Ultimate Ore Washing Plant
+devtech.machine.ore_washer.luv.name=Ultimate Ore Washing Plant II
+devtech.machine.ore_washer.zpm.name=Ultimate Ore Washing Plant III
+devtech.machine.ore_washer.uv.name=Ultimate Ore Washing Plant IV
+devtech.machine.ore_washer.max.name=Infinite Ore Washing Plant
+
+devtech.machine.packer.ulv.name=Primitive Packager
+devtech.machine.packer.iv.name=Ultimate Packager
+devtech.machine.packer.luv.name=Ultimate Packager II
+devtech.machine.packer.zpm.name=Ultimate Packager III
+devtech.machine.packer.uv.name=Ultimate Packager IV
+devtech.machine.packer.max.name=Infinite Packager
+
+devtech.machine.unpacker.ulv.name=Primitive Unpackager
+devtech.machine.unpacker.iv.name=Ultimate Unpackager
+devtech.machine.unpacker.luv.name=Ultimate Unpackager II
+devtech.machine.unpacker.zpm.name=Ultimate Unpackager III
+devtech.machine.unpacker.uv.name=Ultimate Unpackager IV
+devtech.machine.unpacker.max.name=Infinite Unpackager
+
+devtech.machine.plasma_arc_furnace.ulv.name=Primitive Plasma Arc Furnace
+devtech.machine.plasma_arc_furnace.iv.name=Ultimate Plasma Arc Furnace
+devtech.machine.plasma_arc_furnace.luv.name=Ultimate Plasma Arc Furnace II
+devtech.machine.plasma_arc_furnace.zpm.name=Ultimate Plasma Arc Furnace III
+devtech.machine.plasma_arc_furnace.uv.name=Ultimate Plasma Arc Furnace IV
+devtech.machine.plasma_arc_furnace.max.name=Infinite Plasma Arc Furnace
+
+devtech.machine.polarizer.ulv.name=Primitive Polarizer
+devtech.machine.polarizer.iv.name=Ultimate Polarizer
+devtech.machine.polarizer.luv.name=Ultimate Polarizer II
+devtech.machine.polarizer.zpm.name=Ultimate Polarizer III
+devtech.machine.polarizer.uv.name=Ultimate Polarizer IV
+devtech.machine.polarizer.max.name=Infinite Polarizer
+
+devtech.machine.laser_engraver.ulv.name=Primitive Precision Laser Engraver
+devtech.machine.laser_engraver.luv.name=Ultimate Precision Laser Engraver
+devtech.machine.laser_engraver.zpm.name=Ultimate Precision Laser Engraver II
+devtech.machine.laser_engraver.uv.name=Ultimate Precision Laser Engraver III
+devtech.machine.laser_engraver.max.name=Infinite Precision Laser Engraver
+
+devtech.machine.sifter.ulv.name=Primitive Sifting Machine
+devtech.machine.sifter.iv.name=Ultimate Sifting Machine
+devtech.machine.sifter.luv.name=Ultimate Sifting Machine II
+devtech.machine.sifter.zpm.name=Ultimate Sifting Machine III
+devtech.machine.sifter.uv.name=Ultimate Sifting Machine IV
+devtech.machine.sifter.max.name=Infinite Sifting Machine
+
+devtech.machine.thermal_centrifuge.ulv.name=Primitive Thermal Centrifuge
+devtech.machine.thermal_centrifuge.iv.name=Ultimate Thermal Centrifuge
+devtech.machine.thermal_centrifuge.luv.name=Ultimate Thermal Centrifuge II
+devtech.machine.thermal_centrifuge.zpm.name=Ultimate Thermal Centrifuge III
+devtech.machine.thermal_centrifuge.uv.name=Ultimate Thermal Centrifuge IV
+devtech.machine.thermal_centrifuge.max.name=Infinite Thermal Centrifuge
+
+devtech.machine.wiremill.ulv.name=Primitive Wiremill
+devtech.machine.wiremill.iv.name=Ultimate Wiremill
+devtech.machine.wiremill.luv.name=Ultimate Wiremill II
+devtech.machine.wiremill.zpm.name=Ultimate Wiremill III
+devtech.machine.wiremill.uv.name=Ultimate Wiremill IV
+devtech.machine.wiremill.max.name=Infinite Wiremill

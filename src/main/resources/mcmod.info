@@ -1,0 +1,16 @@
+[
+{
+  "modid": "devtech",
+  "name": "DevTech",
+  "description": "A GregTech addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zook"],
+  "credits": "Spaghetti",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
