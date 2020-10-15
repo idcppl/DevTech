@@ -1,7 +1,10 @@
 package com.zook.devtech.gregtech.machines;
 
 import com.zook.devtech.DevTech;
+import com.zook.devtech.gregtech.machines.metatileentities.FluidCollector;
 import crafttweaker.annotations.ZenRegister;
+import crafttweaker.api.liquid.ILiquidStack;
+import crafttweaker.api.minecraft.CraftTweakerMC;
 import gregtech.api.GregTechAPI;
 import gregtech.api.metatileentity.SimpleGeneratorMetaTileEntity;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
@@ -54,5 +57,10 @@ public class IRegisterMachine {
     @ZenMethod
     public static void CreateQuantumTank(int id, String nameID, int tier, int storage) {
         GregTechAPI.registerMetaTileEntity(id, new MetaTileEntityQuantumTank(new ResourceLocation(DevTech.MODID, nameID), tier, storage));
+    }
+
+    @ZenMethod
+    public static void CreateFluidCollector(int id, String nameID, int tier, ILiquidStack fluid, int fluidAmount) {
+        GregTechAPI.registerMetaTileEntity(id, new FluidCollector(new ResourceLocation(DevTech.MODID, nameID), tier, CraftTweakerMC.getLiquidStack(fluid), fluidAmount));
     }
 }

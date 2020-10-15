@@ -11,7 +11,7 @@ public enum ConstantOverlayFace {
     BOTTOM(OrientedOverlayRenderer.OverlayFace.BOTTOM),
     SIDE(OrientedOverlayRenderer.OverlayFace.SIDE);
     public OrientedOverlayRenderer.OverlayFace val;
-    ConstantOverlayFace(OrientedOverlayRenderer.OverlayFace val) {
-        val = val;
+    ConstantOverlayFace(OrientedOverlayRenderer.OverlayFace face) {
+        val = face;
     }
 }
