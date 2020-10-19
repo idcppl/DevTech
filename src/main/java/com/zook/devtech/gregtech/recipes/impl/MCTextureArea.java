@@ -13,4 +13,9 @@ public class MCTextureArea implements IDTTextureArea {
     public TextureArea getInternal() {
         return this.inner;
     }
+
+    @Override
+    public IDTTextureArea getSubArea(double offsetX, double offsetY, double width, double height) {
+        return new MCTextureArea(inner.getSubArea(offsetX, offsetY, width, height));
+    }
 }

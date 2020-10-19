@@ -4,18 +4,22 @@ import com.zook.devtech.gregtech.recipes.constants.ConstantMoveType;
 import com.zook.devtech.gregtech.recipes.recipemaps.TallRecipeMap;
 import com.zook.devtech.gregtech.recipes.recipemaps.TallerRecipeMap;
 import com.zook.devtech.gregtech.recipes.recipemaps.TallestRecipeMap;
-import crafttweaker.CraftTweakerAPI;
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.gui.resources.TextureArea;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.builders.BlastRecipeBuilder;
+import gregtech.api.recipes.builders.IntCircuitRecipeBuilder;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
+import gregtech.api.recipes.crafttweaker.CTRecipe;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @ZenClass("mods.devtech.IRecipeMap")
 @ZenRegister
@@ -209,5 +213,26 @@ public class IRecipeMap {
             recipeMap.setProgressBar(progressBar, move);
         }
         return recipeMap;
+    }
+
+    @ZenMethod
+    public static void cloneSimple(RecipeMap<?> map1, RecipeMap<SimpleRecipeBuilder> map2) {
+        for(Recipe recipe : map1.getRecipeList()) {
+            new SimpleRecipeBuilder(recipe, map2).buildAndRegister();
+        }
+    }
+
+    @ZenMethod
+    public static void cloneCircuit(RecipeMap<?> map1, RecipeMap<IntCircuitRecipeBuilder> map2) {
+        for(Recipe recipe : map1.getRecipeList()) {
+            new IntCircuitRecipeBuilder(recipe, map2).buildAndRegister();
+        }
+    }
+
+    @ZenMethod
+    public static void cloneBlast(RecipeMap<?> map1, RecipeMap<BlastRecipeBuilder> map2) {
+        for(Recipe recipe : map1.getRecipeList()) {
+            new BlastRecipeBuilder(recipe, map2).buildAndRegister();
+        }
     }
 }
