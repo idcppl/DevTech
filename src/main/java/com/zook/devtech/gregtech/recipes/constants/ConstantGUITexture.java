@@ -86,13 +86,6 @@ public enum ConstantGUITexture {
         return ConstantGUITexture.valueOf(name).getTexture();
     }
 
-    @ZenMethod
-    public static IDTTextureArea add(String uniqueName, IDTTextureArea textureArea) {
-        return Objects.requireNonNull(EnumHelper.addEnum(ConstantGUITexture.class, uniqueName,
-                new Class[]{IDTTextureArea.class},
-                textureArea)).getTexture();
-    }
-
     public IDTTextureArea getTexture() {
         return inner;
     }

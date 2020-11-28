@@ -1,9 +1,6 @@
 package com.zook.devtech.gregtech.recipes;
 
 import com.zook.devtech.gregtech.recipes.constants.ConstantMoveType;
-import com.zook.devtech.gregtech.recipes.recipemaps.TallRecipeMap;
-import com.zook.devtech.gregtech.recipes.recipemaps.TallerRecipeMap;
-import com.zook.devtech.gregtech.recipes.recipemaps.TallestRecipeMap;
 import crafttweaker.annotations.ZenRegister;
 import gregtech.api.gui.resources.TextureArea;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
@@ -12,14 +9,12 @@ import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.BlastRecipeBuilder;
 import gregtech.api.recipes.builders.IntCircuitRecipeBuilder;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
-import gregtech.api.recipes.crafttweaker.CTRecipe;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 @ZenClass("mods.devtech.IRecipeMap")
 @ZenRegister
@@ -37,7 +32,6 @@ public class IRecipeMap {
     private MoveType move;
     private TextureArea progressBar;
     private List<IOverlaySlots> overlay = new ArrayList<>();
-    private RecipeMap<?> recipeMap;
 
     public IRecipeMap(String name) {
         this.name = name;
@@ -124,77 +118,8 @@ public class IRecipeMap {
     }
 
     @ZenMethod
-    public RecipeMap<?> buildAsSimple() {
-        recipeMap = new RecipeMap<>(name,
-                minInputs,
-                maxInputs,
-                minOutputs,
-                maxOutputs,
-                minFluidInputs,
-                maxFluidInputs,
-                minFluidOutputs,
-                maxFluidOutputs, new SimpleRecipeBuilder());
-        for (IOverlaySlots iOverlaySlots : overlay) {
-            recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), iOverlaySlots.getLast(), iOverlaySlots.getTextureArea());
-            if(iOverlaySlots.getBoth()) {
-                recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), true, iOverlaySlots.getTextureArea());
-            }
-        }
-        if(ifso) {
-            recipeMap.setProgressBar(progressBar, move);
-        }
-        return recipeMap;
-    }
-    //Still need to fix the tall gui's
-    @ZenMethod
-    public RecipeMap<?> buildAsTall() {
-        recipeMap = new TallRecipeMap(name,
-                minInputs,
-                maxInputs,
-                minOutputs,
-                maxOutputs,
-                minFluidInputs,
-                maxFluidInputs,
-                minFluidOutputs,
-                maxFluidOutputs, new SimpleRecipeBuilder());
-        for (IOverlaySlots iOverlaySlots : overlay) {
-            recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), iOverlaySlots.getLast(), iOverlaySlots.getTextureArea());
-            if(iOverlaySlots.getBoth()) {
-                recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), true, iOverlaySlots.getTextureArea());
-            }
-        }
-        if(ifso) {
-            recipeMap.setProgressBar(progressBar, move);
-        }
-        return recipeMap;
-    }
-
-    @ZenMethod
-    public RecipeMap<?> buildAsTaller() {
-        recipeMap = new TallerRecipeMap(name,
-                minInputs,
-                maxInputs,
-                minOutputs,
-                maxOutputs,
-                minFluidInputs,
-                maxFluidInputs,
-                minFluidOutputs,
-                maxFluidOutputs, new SimpleRecipeBuilder());
-        for (IOverlaySlots iOverlaySlots : overlay) {
-            recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), iOverlaySlots.getLast(), iOverlaySlots.getTextureArea());
-            if(iOverlaySlots.getBoth()) {
-                recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), true, iOverlaySlots.getTextureArea());
-            }
-        }
-        if(ifso) {
-            recipeMap.setProgressBar(progressBar, move);
-        }
-        return recipeMap;
-    }
-
-    @ZenMethod
-    public RecipeMap<?> buildAsTallest() {
-        recipeMap = new TallestRecipeMap(name,
+    public RecipeMap<?> build() {
+        RecipeMap<?> recipeMap = new RecipeMap<>(name,
                 minInputs,
                 maxInputs,
                 minOutputs,

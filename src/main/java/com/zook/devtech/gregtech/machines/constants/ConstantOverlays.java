@@ -73,11 +73,4 @@ public enum ConstantOverlays {
     public static IOverlayRenderer get(String name) {
         return ConstantOverlays.valueOf(name).getInternal();
     }
-
-    @ZenMethod
-    public static IOverlayRenderer add(String uniqueName, IOverlayRenderer overlay) {
-        return Objects.requireNonNull(EnumHelper.addEnum(ConstantOverlays.class, uniqueName,
-                new Class[]{IOverlayRenderer.class},
-                overlay)).getInternal();
-    }
 }
