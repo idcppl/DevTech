@@ -1,8 +1,10 @@
 package com.zook.devtech.gregtech.machines;
 
 import com.zook.devtech.DevTech;
+import com.zook.devtech.gregtech.machines.constants.ConstantOverlays;
 import com.zook.devtech.gregtech.machines.metatileentities.FluidCollector;
 import crafttweaker.annotations.ZenRegister;
+import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.liquid.ILiquidStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import gregtech.api.GregTechAPI;
@@ -30,13 +32,28 @@ public class IRegisterMachine {
     }
 
     @ZenMethod
+    public static void CreateSimpleMachine(int id, String nameID, RecipeMap<?> recipeMap, ConstantOverlays renderer, int tier) {
+        GregTechAPI.registerMetaTileEntity(id, new SimpleMachineMetaTileEntity(new ResourceLocation(DevTech.MODID, nameID), recipeMap, renderer.getInternal().getInternal(), tier));
+    }
+
+    @ZenMethod
     public static void CreateSimpleGenerator(int id, String nameID, FuelRecipeMap fuelRecipeMap, IOverlayRenderer renderer, int tier) {
         GregTechAPI.registerMetaTileEntity(id, new SimpleGeneratorMetaTileEntity(new ResourceLocation(DevTech.MODID, nameID), fuelRecipeMap, renderer.getInternal(), tier));
     }
 
     @ZenMethod
+    public static void CreateSimpleGenerator(int id, String nameID, FuelRecipeMap fuelRecipeMap, ConstantOverlays renderer, int tier) {
+        GregTechAPI.registerMetaTileEntity(id, new SimpleGeneratorMetaTileEntity(new ResourceLocation(DevTech.MODID, nameID), fuelRecipeMap, renderer.getInternal().getInternal(), tier));
+    }
+
+    @ZenMethod
     public static void CreateMacerator(int id, String nameID, RecipeMap<?> recipeMap, IOverlayRenderer renderer, int tier, int outputAmount) {
         GregTechAPI.registerMetaTileEntity(id, new MetaTileEntityMacerator(new ResourceLocation(DevTech.MODID, nameID), recipeMap, outputAmount, renderer.getInternal(), tier));
+    }
+
+    @ZenMethod
+    public static void CreateMacerator(int id, String nameID, RecipeMap<?> recipeMap, ConstantOverlays renderer, int tier, int outputAmount) {
+        GregTechAPI.registerMetaTileEntity(id, new MetaTileEntityMacerator(new ResourceLocation(DevTech.MODID, nameID), recipeMap, outputAmount, renderer.getInternal().getInternal(), tier));
     }
 
     @ZenMethod
@@ -60,7 +77,7 @@ public class IRegisterMachine {
     }
 
     @ZenMethod
-    public static void CreateFluidCollector(int id, String nameID, int tier, ILiquidStack fluid, int fluidAmount) {
-        GregTechAPI.registerMetaTileEntity(id, new FluidCollector(new ResourceLocation(DevTech.MODID, nameID), tier, CraftTweakerMC.getLiquidStack(fluid), fluidAmount));
+    public static void CreateFluidCollector(int id, String nameID, int tier, ILiquidStack fluid, int cycleLength, int tankSize) {
+        GregTechAPI.registerMetaTileEntity(id, new FluidCollector(new ResourceLocation(DevTech.MODID, nameID), tier, CraftTweakerMC.getLiquidStack(fluid), cycleLength, tankSize));
     }
 }

@@ -4,16 +4,17 @@ import crafttweaker.annotations.ZenRegister;
 import gregtech.api.render.OrientedOverlayRenderer;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
+import stanhebben.zenscript.annotations.ZenProperty;
 
 
 @ZenClass("mods.devtech.OverlayFace")
 @ZenRegister
 public enum ConstantOverlayFace {
-    FRONT(OrientedOverlayRenderer.OverlayFace.FRONT),
-    BACK(OrientedOverlayRenderer.OverlayFace.BACK),
-    TOP(OrientedOverlayRenderer.OverlayFace.TOP),
-    BOTTOM(OrientedOverlayRenderer.OverlayFace.BOTTOM),
-    SIDE(OrientedOverlayRenderer.OverlayFace.SIDE);
+    @ZenProperty FRONT(OrientedOverlayRenderer.OverlayFace.FRONT),
+    @ZenProperty BACK(OrientedOverlayRenderer.OverlayFace.BACK),
+    @ZenProperty TOP(OrientedOverlayRenderer.OverlayFace.TOP),
+    @ZenProperty BOTTOM(OrientedOverlayRenderer.OverlayFace.BOTTOM),
+    @ZenProperty SIDE(OrientedOverlayRenderer.OverlayFace.SIDE);
 
     public OrientedOverlayRenderer.OverlayFace val;
     ConstantOverlayFace(OrientedOverlayRenderer.OverlayFace face) {

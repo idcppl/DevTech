@@ -13,7 +13,11 @@ public interface IOverlayRenderer {
     OrientedOverlayRenderer getInternal();
 
     @ZenMethod
-    static IOverlayRenderer newOverlay(String path, ConstantOverlayFace firstFace, ConstantOverlayFace secondFace) {
-        return new MCOverlayRenderer(new OrientedOverlayRenderer(path, firstFace.getInternal(), secondFace.getInternal()));
+    static IOverlayRenderer newOverlay(String path, ConstantOverlayFace... faces) {
+        OrientedOverlayRenderer.OverlayFace[] arr = new OrientedOverlayRenderer.OverlayFace[5];
+        for (int i = 0; i < faces.length; i++) {
+            arr[i] = faces[i].getInternal();
+        }
+        return new MCOverlayRenderer(path, arr);
     }
 }

@@ -10,7 +10,6 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntityHolder;
 import gregtech.api.metatileentity.TieredMetaTileEntity;
 import gregtech.api.render.Textures;
-import gregtech.common.metatileentities.electric.MetaTileEntityAirCollector;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -25,23 +24,36 @@ import java.util.List;
 
 
 public class FluidCollector extends TieredMetaTileEntity {
-    private static final int PRODUCTION_CYCLE_LENGTH = 20;
-    private FluidStack fluid;
-    private int fluidAmount;
-    public FluidCollector(ResourceLocation metaTileEntityId, int tier, FluidStack fluid, int fluidAmount) {
+    private final int production_cycle_length;
+    private final FluidStack fluid;
+    private final int fluidAmount;
+    private FluidTank fluidTank;
+    private final int tankSize;
+    public FluidCollector(ResourceLocation metaTileEntityId, int tier, FluidStack fluid, int production_cycle_length, int tankSize) {
         super(metaTileEntityId, tier);
         this.fluid = fluid;
-        this.fluidAmount =  fluidAmount;
+        this.fluidAmount =  fluid.amount;
+        this.production_cycle_length = production_cycle_length;
+        this.tankSize = tankSize;
+        initializeInventory();
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(MetaTileEntityHolder holder) {
-        return new FluidCollector(metaTileEntityId, getTier(), fluid, fluidAmount);
+        return new FluidCollector(metaTileEntityId, getTier(), fluid, production_cycle_length, tankSize);
+    }
+
+    @Override
+    protected void initializeInventory() {
+        super.initializeInventory();
+        this.fluidTank = new FluidTank(tankSize);
+        this.fluidInventory = fluidTank;
+        this.exportFluids = new FluidTankList(false, fluidTank);
     }
 
     @Override
     protected FluidTankList createExportFluidHandler() {
-        return new FluidTankList(false, new FluidTank(32000));
+        return new FluidTankList(false, fluidTank);
     }
 
     @Override
@@ -50,10 +62,9 @@ public class FluidCollector extends TieredMetaTileEntity {
 
         if (!getWorld().isRemote) {
             long energyToConsume = GTValues.V[getTier()];
-            if (checkDimension() && getTimer() % PRODUCTION_CYCLE_LENGTH == 0L && energyContainer.getEnergyStored() >= energyToConsume) {
-                int newFluidAmount = getCollectedFluidAmount();
-                FluidStack newFluid = new FluidStack(fluid, newFluidAmount);
-                if (exportFluids.fill(newFluid, false) == newFluidAmount) {
+            if (getTimer() % production_cycle_length == 0L && energyContainer.getEnergyStored() >= energyToConsume) {
+                FluidStack newFluid = new FluidStack(fluid, fluidAmount);
+                if (exportFluids.fill(newFluid, false) == fluidAmount) {
                     exportFluids.fill(newFluid, true);
                     energyContainer.removeEnergy(energyToConsume);
                 }
@@ -62,14 +73,6 @@ public class FluidCollector extends TieredMetaTileEntity {
                 pushFluidsIntoNearbyHandlers(getFrontFacing());
             }
         }
-    }
-
-    private boolean checkDimension() {
-        return true;
-    }
-
-    private int getCollectedFluidAmount() {
-        return fluidAmount * (1 << getTier());
     }
 
     @Override
@@ -98,8 +101,7 @@ public class FluidCollector extends TieredMetaTileEntity {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
-        tooltip.add(I18n.format("gregtech.machine.air_collector.tooltip"));
-        tooltip.add(I18n.format("gregtech.machine.air_collector.collection_speed", getCollectedFluidAmount(), PRODUCTION_CYCLE_LENGTH));
+        tooltip.add(I18n.format("gregtech.machine.air_collector.collection_speed", fluidAmount, production_cycle_length));
         tooltip.add(I18n.format("gregtech.universal.tooltip.voltage_in", energyContainer.getInputVoltage(), GTValues.VN[getTier()]));
         tooltip.add(I18n.format("gregtech.universal.tooltip.energy_storage_capacity", energyContainer.getEnergyCapacity()));
         tooltip.add(I18n.format("gregtech.universal.tooltip.fluid_storage_capacity", exportFluids.getTankAt(0).getCapacity()));

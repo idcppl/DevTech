@@ -141,6 +141,52 @@ public class IRecipeMap {
     }
 
     @ZenMethod
+    public RecipeMap<?> buildCircuit() {
+        RecipeMap<?> recipeMap = new RecipeMap<>(name,
+                minInputs,
+                maxInputs,
+                minOutputs,
+                maxOutputs,
+                minFluidInputs,
+                maxFluidInputs,
+                minFluidOutputs,
+                maxFluidOutputs, new IntCircuitRecipeBuilder());
+        for (IOverlaySlots iOverlaySlots : overlay) {
+            recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), iOverlaySlots.getLast(), iOverlaySlots.getTextureArea());
+            if(iOverlaySlots.getBoth()) {
+                recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), true, iOverlaySlots.getTextureArea());
+            }
+        }
+        if(ifso) {
+            recipeMap.setProgressBar(progressBar, move);
+        }
+        return recipeMap;
+    }
+
+    @ZenMethod
+    public RecipeMap<?> buildBlast() {
+        RecipeMap<?> recipeMap = new RecipeMap<>(name,
+                minInputs,
+                maxInputs,
+                minOutputs,
+                maxOutputs,
+                minFluidInputs,
+                maxFluidInputs,
+                minFluidOutputs,
+                maxFluidOutputs, new BlastRecipeBuilder());
+        for (IOverlaySlots iOverlaySlots : overlay) {
+            recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), iOverlaySlots.getLast(), iOverlaySlots.getTextureArea());
+            if(iOverlaySlots.getBoth()) {
+                recipeMap.setSlotOverlay(iOverlaySlots.getOutput(), iOverlaySlots.getFluid(), true, iOverlaySlots.getTextureArea());
+            }
+        }
+        if(ifso) {
+            recipeMap.setProgressBar(progressBar, move);
+        }
+        return recipeMap;
+    }
+
+    @ZenMethod
     public static void cloneSimple(RecipeMap<?> map1, RecipeMap<SimpleRecipeBuilder> map2) {
         for(Recipe recipe : map1.getRecipeList()) {
             new SimpleRecipeBuilder(recipe, map2).buildAndRegister();

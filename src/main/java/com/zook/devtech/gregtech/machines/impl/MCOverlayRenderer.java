@@ -4,9 +4,13 @@ import com.zook.devtech.gregtech.machines.IOverlayRenderer;
 import gregtech.api.render.OrientedOverlayRenderer;
 
 public class MCOverlayRenderer implements IOverlayRenderer {
-    private OrientedOverlayRenderer inner;
-    public MCOverlayRenderer(OrientedOverlayRenderer inner) {
-        this.inner = inner;
+    private final OrientedOverlayRenderer inner;
+    public MCOverlayRenderer(String name, OrientedOverlayRenderer.OverlayFace... faces) {
+        this.inner = new OrientedOverlayRenderer(name, faces);
+    }
+
+    public MCOverlayRenderer(OrientedOverlayRenderer renderer) {
+        this.inner = renderer;
     }
 
     @Override
