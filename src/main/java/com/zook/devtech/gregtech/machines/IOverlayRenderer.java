@@ -14,7 +14,7 @@ public interface IOverlayRenderer {
 
     @ZenMethod
     static IOverlayRenderer newOverlay(String path, ConstantOverlayFace... faces) {
-        OrientedOverlayRenderer.OverlayFace[] arr = new OrientedOverlayRenderer.OverlayFace[5];
+        OrientedOverlayRenderer.OverlayFace[] arr = new OrientedOverlayRenderer.OverlayFace[faces.length];
         for (int i = 0; i < faces.length; i++) {
             arr[i] = faces[i].getInternal();
         }
