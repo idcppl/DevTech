@@ -5,7 +5,7 @@ import gregtech.api.recipes.machines.FuelRecipeMap;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ZenClass("mods.devtech.IRecipeMap")
+@ZenClass("mods.devtech.IFuelRecipeMap")
 @ZenRegister
 public class IFuelRecipeMap {
     @ZenMethod
