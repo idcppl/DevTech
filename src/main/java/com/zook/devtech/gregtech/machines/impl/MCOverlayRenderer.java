@@ -8,10 +8,7 @@ import net.minecraftforge.common.util.EnumHelper;
 public class MCOverlayRenderer implements IOverlayRenderer {
     private final OrientedOverlayRenderer inner;
     public MCOverlayRenderer(String name, OrientedOverlayRenderer.OverlayFace... faces) {
-        OrientedOverlayRenderer renderer = new OrientedOverlayRenderer(name, faces);
-        EnumHelper.addEnum(ConstantOverlays.class, name, new Class[]{OrientedOverlayRenderer.class},
-        renderer);
-        this.inner = renderer;
+        this.inner = new OrientedOverlayRenderer(name, faces);
     }
 
     public MCOverlayRenderer(OrientedOverlayRenderer renderer) {
