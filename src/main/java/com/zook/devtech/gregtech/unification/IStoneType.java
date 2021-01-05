@@ -2,6 +2,7 @@ package com.zook.devtech.gregtech.unification;
 
 import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.block.IBlockState;
+import crafttweaker.api.minecraft.CraftTweakerMC;
 import gregtech.api.unification.crafttweaker.MaterialBracketHandler;
 import gregtech.api.unification.material.type.DustMaterial;
 import gregtech.api.unification.ore.StoneType;
@@ -20,11 +21,11 @@ public class IStoneType {
 
     @ZenMethod
     public static IStoneType createStoneType(int id, String name, String backgroundSideTexture, String backgroundTopTexture, IOrePrefix processingPrefix, String stoneMaterial, String harvestTool, int flags, IBlockState stone, IBlockStatePredicate predicate) {
-        return new IStoneType(new StoneType(id, name, new ResourceLocation(backgroundSideTexture), new ResourceLocation(backgroundTopTexture), SoundType.STONE, processingPrefix.getInternal(), (DustMaterial) MaterialBracketHandler.getMaterial(stoneMaterial), harvestTool, flags, IBlockStateSupplier.make(stone)::get, IBlockStatePredicate.toInternal(predicate)));
+        return new IStoneType(new StoneType(id, name, new ResourceLocation(backgroundSideTexture), new ResourceLocation(backgroundTopTexture), CraftTweakerMC.getBlockState(stone).getBlock().getSoundType(), processingPrefix.getInternal(), (DustMaterial) MaterialBracketHandler.getMaterial(stoneMaterial), harvestTool, flags, IBlockStateSupplier.make(stone)::get, IBlockStatePredicate.toInternal(predicate)));
     }
 
     @ZenMethod
     public static IStoneType createStoneType(int id, String name, String backgroundSideTexture, IOrePrefix processingPrefix, String stoneMaterial, String harvestTool, int flags, IBlockState stone, IBlockStatePredicate predicate) {
-        return new IStoneType(new StoneType(id, name, new ResourceLocation(backgroundSideTexture), SoundType.STONE, processingPrefix.getInternal(), (DustMaterial) MaterialBracketHandler.getMaterial(stoneMaterial), harvestTool, flags, IBlockStateSupplier.make(stone)::get, IBlockStatePredicate.toInternal(predicate)));
+        return new IStoneType(new StoneType(id, name, new ResourceLocation(backgroundSideTexture), CraftTweakerMC.getBlockState(stone).getBlock().getSoundType(), processingPrefix.getInternal(), (DustMaterial) MaterialBracketHandler.getMaterial(stoneMaterial), harvestTool, flags, IBlockStateSupplier.make(stone)::get, IBlockStatePredicate.toInternal(predicate)));
     }
 }
